@@ -25,22 +25,23 @@ function updateTime() {
     );
   }
 
-  // Paris
+  // Lyon
 
-  let parisElement = document.querySelector("#paris");
-  if (parisElement) {
-    let parisDateElement = parisElement.querySelector(".date");
-    let parisTimeElement = parisElement.querySelector(".time");
-    let parisTime = moment().tz("Europe/Paris");
-    parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-    parisTimeElement.innerHTML = parisTime.format(
-      "h:mm:ss [<small>]A[</small>]"
-    );
+  let lyonElement = document.querySelector("#lyon");
+  if (lyonElement) {
+    let lyonDateElement = lyonElement.querySelector(".date");
+    let lyonTimeElement = lyonElement.querySelector(".time");
+    let lyonTime = moment().tz("Europe/Paris");
+    lyonDateElement.innerHTML = lyonTime.format("MMMM Do YYYY");
+    lyonTimeElement.innerHTML = lyonTime.format("h:mm:ss [<small>]A[</small>]");
   }
 }
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
