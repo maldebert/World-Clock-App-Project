@@ -18,35 +18,40 @@
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select>
+      <select id="city">
         <option value="">Select a city</option>
-        <option value="">Edinburgh</option>
-        <option value="">Lyon</option>
-        <option value="">New York City</option>
-        <option value="">Wellington</option>
-        <option value="">Turin</option>
+        <option value="Europe/Edinburgh">Edinburgh</option>
+        <option value="Europe/Paris">Paris</option>
+        <option value="America/New_York">New York City</option>
+        <option value="Pacific/Auckland">Auckland</option>
+        <option value="Europe/Rome">Rome</option>
+        <option value="Atlantic/Reykjavik">Reykjavìk</option>
+        <option value="Asia/Tokyo">Tokyo</option>
+        <option value="Africa/Johannesburg">Johannesburg</option>
+        <option value="Argentina/Buenos_Aires">Buenos Aires</option>
       </select>
-
-      <div class="city" id="edinburgh">
-        <div>
-          <h2>Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿</h2>
-          <div class="date"></div>
+      <div id="cities">
+        <div class="city" id="edinburgh">
+          <div>
+            <h2>Edinburgh 🏴󠁧󠁢󠁳󠁣󠁴󠁿</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time"></div>
-      </div>
-      <div class="city" id="new-york-city">
-        <div>
-          <h2>New York City 🇺🇸</h2>
-          <div class="date"></div>
+        <div class="city" id="new-york-city">
+          <div>
+            <h2>New York City 🇺🇸</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time"></div>
-      </div>
-      <div class="city" id="lyon">
-        <div>
-          <h2>Lyon 🇫🇷</h2>
-          <div class="date"></div>
+        <div class="city" id="paris">
+          <div>
+            <h2>Paris 🇫🇷</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time"></div>
       </div>
     </div>
     <footer>
